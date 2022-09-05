@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
-import User from './/User';
+import User from './user';
 import { typeDBUser } from './types';
 
 export class UserQuery {

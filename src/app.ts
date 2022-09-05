@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 // import caors from 'cors';
 const cors = require('cors');
 // const config = require( './config.json' );
-import { UserQuery } from './UserQuery';
+import { UserQuery } from './userquery';
 
 export class App {
     public expressApp: Application;
