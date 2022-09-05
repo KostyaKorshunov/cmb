@@ -6,6 +6,6 @@ dotenv.config({
 });
 
 module.exports = {
-    PORT: process.env.PORT,
-    MONGO_CONNECTION_STRING: process.env.MONGO_CONNECTION_STRING
+    PORT: "3000",
+    MONGO_CONNECTION_STRING: "mongodb+srv://user:user@cluster0.jijfxzy.mongodb.net/?retryWrites=true&w=majority"
   };
