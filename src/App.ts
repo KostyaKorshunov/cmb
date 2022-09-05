@@ -34,7 +34,7 @@ export class App {
     attachRoutes () {
         //let app = this.expressApp;
         let jsonParser = bodyParser.json();
-        this.expressApp.get('/user', this.getUser.bind(this));
+        this.expressApp.get('/user', this.getUser);
     }
 
     getUser(req: Request, res: Response) {
