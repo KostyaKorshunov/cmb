@@ -16,13 +16,14 @@ export class App {
     //    this.dbURL = "mongodb+srv://user:user@cluster0.4jxafye.mongodb.net/?retryWrites=true&w=majority";
         this.dbURL = "mongodb+srv://user:user@cluster0.jijfxzy.mongodb.net/?retryWrites=true&w=majority";
         this.expressApp = express();
-        // const corsOptions = {
-        //     origin: 'http://127.0.0.1:5500',
-        //     optionsSuccessStatus: 200,
-        //     methods: "GET, PUT, POST"
-        // }
-        this.expressApp.use(cors());
-        // this.expressApp.use(cors(corsOptions));
+        const corsOptions = {
+            origin: '*',
+            optionsSuccessStatus: 200,
+            methods: "GET, PUT, POST"
+        }
+        // this.expressApp.use(cors());
+        this.expressApp.use(cors(corsOptions));
+        // this.expressApp.options('*', cors());
 
         // , {useUnifiedTopology: true, useNewUrlParser: true}
         mongoose.connect(this.dbURL);
