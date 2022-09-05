@@ -1,6 +1,6 @@
 import express, { Application, Request, Response } from 'express';
 import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
 // import caors from 'cors';
 const cors = require('cors');
 // const config = require( './config.json' );
@@ -8,12 +8,13 @@ const cors = require('cors');
 
 export class App {
     public expressApp: Application;
-    public dbURL: string;
+    // public dbURL: string;
     
 
     constructor() {
+        this.expressApp.listen(8000, "0.0.0.0");
     //    this.dbURL = "mongodb+srv://user:user@cluster0.4jxafye.mongodb.net/?retryWrites=true&w=majority";
-        this.dbURL = "mongodb+srv://user:user@cluster0.jijfxzy.mongodb.net/?retryWrites=true&w=majority";
+        // this.dbURL = "mongodb+srv://user:user@cluster0.jijfxzy.mongodb.net/?retryWrites=true&w=majority";
         this.expressApp = express();
         // const corsOptions = {
         //     origin: '*',
@@ -25,7 +26,7 @@ export class App {
         // this.expressApp.options('*', cors());
 
         // , {useUnifiedTopology: true, useNewUrlParser: true}
-        mongoose.connect(this.dbURL);
+        // mongoose.connect(this.dbURL);
 
         this.attachRoutes();
     }
