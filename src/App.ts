@@ -3,7 +3,6 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 // import caors from 'cors';
 const cors = require('cors');
-// const config = require( './config.json' );
 import { UserQuery } from './UserQuery';
 
 export class App {
