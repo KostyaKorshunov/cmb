@@ -12,7 +12,6 @@ export class App {
     
 
     constructor() {
-        this.expressApp.listen(8000, "0.0.0.0");
     //    this.dbURL = "mongodb+srv://user:user@cluster0.4jxafye.mongodb.net/?retryWrites=true&w=majority";
         // this.dbURL = "mongodb+srv://user:user@cluster0.jijfxzy.mongodb.net/?retryWrites=true&w=majority";
         this.expressApp = express();
@@ -29,6 +28,7 @@ export class App {
         // mongoose.connect(this.dbURL);
 
         this.attachRoutes();
+        this.expressApp.listen(80, "0.0.0.0");
     }
 
     attachRoutes () {
