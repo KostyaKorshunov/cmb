@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 // const userService = require('../resources/users/user.service');
 
 const connect = runServer => {
-  mongoose.connect(process.env.MONGO_CONNECTION_STRING, {
+  mongoose.connect("mongodb+srv://user:user@cluster0.jijfxzy.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
   });
