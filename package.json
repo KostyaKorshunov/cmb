@@ -2,9 +2,9 @@
   "name": "coinmarket-server",
   "version": "1.0.1",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev index.ts",
+    "dev": "ts-node-dev index.js",
     "build": "tsc",
     "start": "node dist"
   },

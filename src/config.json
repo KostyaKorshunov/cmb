@@ -1,5 +1,0 @@
-{
-    "host": "0.0.0.0",
-    "port": 8000,
-    "bdURL": "mongodb+srv://user:coinmarket2022@cluster0.4jxafye.mongodb.net/?retryWrites=true&w=majority"
-}

@@ -1,12 +1,12 @@
-import express, { Application, Request, Response } from 'express';
+import express from 'express';
 import bodyParser from 'body-parser';
 const cors = require('cors');
 
-const expressApp: Application = express();
+const expressApp = express();
 expressApp.use(cors());
 let jsonParser = bodyParser.json();
 
-const getUser = (req: Request, res: Response) => {
+const getUser = (req, res) => {
     if (!req.query.email) {
         console.log("Bad request");
         res.status(400).json({"answer": "bad request"});
